@@ -1,0 +1,14 @@
+@mixin Mylink($link, $hover, $active) {
+    & {
+        color: $link;
+        &:hover {
+            color: $hover;
+        }
+        &:active, &:focus {
+            color: $active;
+            // border-radius: 5px;
+        }
+    }
+}
+
+a { @include Mylink(green, blue, red); }
